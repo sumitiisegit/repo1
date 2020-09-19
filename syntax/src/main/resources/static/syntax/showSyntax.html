@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Syntax List</title>
+</head>
+<body>
+
+<em><strong>Syntax List</strong></em>
+
+<p>
+    Message: ${message}
+</p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    <br>
+
+    <tr>
+        <td>${syntax.id}</td>
+        <td>${syntax.name}</td>
+    </tr>
+
+
+    <tr itemtype="syntax:${syntaxList}">
+        <td>${syntax.id}</td>
+        <td>${syntax.name}</td>
+    </tr>
+
+</table>
+
+<br>
+<hr>
+<a href="/index.html">Home</a><br/>
+</body>
+</html>

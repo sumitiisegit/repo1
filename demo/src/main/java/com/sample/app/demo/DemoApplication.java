@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 //@Configuration
 //@SpringBootApplication
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 //@ComponentScan(basePackages = "com.sample.app")
 @SpringBootApplication(scanBasePackages={
         "com.sample.app"})

@@ -10,13 +10,13 @@ public class School {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "sid")
-    private String id;
+    private int id;
 
     @Column(name = "name")
     private String name;
 
     @Column(name = "zipcode")
-    private Integer zipCode;
+    private int zipCode;
 
     @Column(name = "address")
     private String address;
@@ -24,11 +24,11 @@ public class School {
     @Column(name = "city")
     private String city;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -40,11 +40,11 @@ public class School {
         this.name = name;
     }
 
-    public Integer getZipCode() {
+    public int getZipCode() {
         return zipCode;
     }
 
-    public void setZipCode(Integer zipCode) {
+    public void setZipCode(int zipCode) {
         this.zipCode = zipCode;
     }
 

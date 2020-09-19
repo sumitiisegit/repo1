@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Schools List</title>
+</head>
+<body>
+
+<em><strong>Schools added</strong></em>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>zipcode</th>
+        <th>address</th>
+        <th>City</th>
+    </tr>
+    <br>
+<tr inlist="school:${schoolsList}">
+    <td>${school.id}</td>
+    <td>${school.name}</td>
+    <td>${school.zipCode}</td>
+    <td>${school.address}</td>
+    <td>${school.city}</td>
+    </tr>
+</table>
+
+
+<hr>
+<a href="/addSchool.html">Add New School</a><br/>
+
+<a href="/index.html">Home</a><br/>
+</body>
+</html>

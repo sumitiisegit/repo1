@@ -5,12 +5,14 @@ import com.sample.app.entity.School;
 import com.sample.app.repository.SchoolRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-//@ComponentScan(basePackages = "com.sample.app")
 @RequestMapping(path = "/demo")
-public class SchoolController {
+public class SchoolController{
 
     @Autowired
     private SchoolRepository schoolRepository;
@@ -18,27 +20,33 @@ public class SchoolController {
     @Autowired
     private DSService dsService;
 
-    @PostMapping(path = "/add")
-    public @ResponseBody
-    String addNewSchool(@RequestParam String name, @RequestParam Integer zipCode, @RequestParam String city) {
-
+    @GetMapping(path = "/add")
+    @ResponseBody
+    public ModelAndView addNewSchool(@RequestParam String name, @RequestParam int zipCode, @RequestParam String city, Model model) {
+        System.out.println("new school to be saved");
         School school = new School();
         school.setName(name);
         school.setZipCode(zipCode);
         school.setCity(city);
-
-        //schoolRepository.save(school);
+        schoolRepository.save(school);
         System.out.println("new school saved");
-        return "Saved";
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("addSchoolResult");
+        //return "addSchoolResult";
+        return modelAndView;
     }
 
     @GetMapping(path = "/show")
     public @ResponseBody
-    Iterable<School> getAllSchools() {
-
+    ModelAndView getAllSchools(ModelMap modelMap) {
+ModelAndView modelAndView = new ModelAndView();
         System.out.println("get all school");
 
-        return schoolRepository.findAll();
+       // return schoolRepository.findAll();
+
+        modelMap.put("schoolsList",schoolRepository.findAll());
+        modelAndView.setViewName("showSchools");
+        return modelAndView;
     }
 
     @GetMapping(path = "/stack")

@@ -16,7 +16,8 @@ public class SchoolRepositoryImpl implements SchoolRepository {
 
     @Override
     public <S extends School> S save(S s) {
-        return null;
+        em.persist(s);
+        return s;
     }
 
     @Override
