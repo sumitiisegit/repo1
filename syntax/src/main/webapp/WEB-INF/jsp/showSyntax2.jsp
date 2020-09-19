@@ -12,25 +12,33 @@
     Message: ${message} <br>
     Message1: ${message1}
 </p>
+
 <table>
     <tr>
         <th>Id</th>
-        <th>Name</th>
+        <th>versionId</th>
+        <th>mappingId</th>
+        <th>data</th>
     </tr>
     <br>
+    <c:if test="${not empty syntaxDtoList}">
+
+    			<c:forEach var="listValue" items="${syntaxDtoList}">
+    			<tr>
+    				<td>${listValue.id}</td>
+    				<td>${listValue.langVersionId}</td>
+    				<td>${listValue.langConstructMappingId}</td>
+    				<td>${listValue.syntaxData}</td>
+    				</tr>
+    			</c:forEach>
+
+    </c:if>
+
 </table>
 <p>
 </p>
 
 <br>
-<c:if test="${not empty syntaxDtoList}">
-
-		<ul>
-			<c:forEach var="listValue" items="${syntaxDtoList}">
-				<li>${listValue.name}</li>
-			</c:forEach>
-		</ul>
-</c:if>
 <br>
 <hr>
 <a href="/index.html">Home</a><br/>

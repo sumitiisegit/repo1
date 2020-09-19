@@ -29,17 +29,8 @@ public class SyntaxRepositoryImpl implements SyntaxRepository{
         List<Syntax> resultList = query.getResultList();
 
         for(Syntax syntax:resultList){
-            System.out.println("in dao:" + syntax.getId()+" "+ syntax.getName());
+            System.out.println("in dao:" + syntax.getId()+" "+ syntax.getSyntaxData());
         }
-
-//        final Collection<Syntax> typedResult = new ArrayList<Syntax>();
-//        for(final Object result : query.getResultList())
-//        {
-//            typedResult.add((Syntax) result);
-//            System.out.println(typedResult);
-//        }
-
-
         return resultList;
     }
 

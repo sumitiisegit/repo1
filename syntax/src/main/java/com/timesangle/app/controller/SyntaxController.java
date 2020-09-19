@@ -39,7 +39,7 @@ public class SyntaxController {
         }
 
         for(SyntaxDto syntaxDto: syntaxDtoList){
-            System.out.println("in controller:" + syntaxDto.getName() + syntaxDto.getId());
+            System.out.println("in controller:" + syntaxDto.getSyntaxData() + syntaxDto.getId());
         }
 
 //        modelMap.addAttribute("syntaxList", syntaxList);
