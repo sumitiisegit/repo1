@@ -6,31 +6,34 @@
 </head>
 <body>
 
-<em><strong>Syntax List</strong></em>
+<em><strong>Syntaxes Data</strong></em>
 
 <p>
     Message: ${message} <br>
     Message1: ${message1}
 </p>
 
-<table>
+<table border="1">
     <tr>
         <th>Id</th>
-        <th>versionId</th>
-        <th>mappingId</th>
-        <th>data</th>
+        <th>Language Name</th>
+        <th>Version Name</th>
+        <th>Construct Name</th>
+        <th>Syntax</th>
+
     </tr>
     <br>
-    <c:if test="${not empty syntaxDtoList}">
-    			<c:forEach var="listValue" items="${syntaxDtoList}">
+    <c:if test="${not empty showDataDtoList}">
+    			<c:forEach var="listValue" items="${showDataDtoList}">
     			<tr>
     				<td>${listValue.id}</td>
-    				<td>${listValue.langVersionId}</td>
-    				<td>${listValue.langConstructMappingId}</td>
-    				<td>${listValue.syntaxData}</td>
+    				<td>${listValue.langName}</td>
+    				<td>${listValue.versionName}</td>
+    				<td>${listValue.constructName}</td>
+     				<td>${listValue.syntaxData}</td>
     				</tr>
     			</c:forEach>
-
+    			
     </c:if>
 
 </table>

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.timesangle.app</groupId>
-	<artifactId>syntax</artifactId>
+	<artifactId>syntaxAdmin</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>syntax</name>
 	<description>Demo project for Spring Boot</description>
