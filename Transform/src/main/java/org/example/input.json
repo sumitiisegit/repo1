@@ -1,0 +1,18 @@
+{
+  "input":{
+    "language": "java",
+    "variable": {
+      "name": "var1",
+      "type": "number",
+      "value": "1"
+    },
+    "while": {
+      "condition": "var1 <5",
+      "operation": [
+        {"statement": "var1=5"}
+      ],
+    },
+    "print": "var1"
+  }
+
+}

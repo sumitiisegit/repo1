@@ -1,0 +1,41 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< org.example:HibernateDemo >----------------------
+[INFO] Building HibernateDemo 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ HibernateDemo ---
+[INFO] org.example:HibernateDemo:jar:1.0-SNAPSHOT
+[INFO] +- org.hibernate:hibernate-core:jar:5.4.9.Final:compile
+[INFO] |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
+[INFO] |  +- javax.persistence:javax.persistence-api:jar:2.2:compile
+[INFO] |  +- org.javassist:javassist:jar:3.24.0-GA:compile
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.10.2:compile
+[INFO] |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  +- org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:jar:1.1.1.Final:compile
+[INFO] |  +- org.jboss:jandex:jar:2.1.1.Final:compile
+[INFO] |  +- com.fasterxml:classmate:jar:1.5.1:compile
+[INFO] |  +- javax.activation:javax.activation-api:jar:1.2.0:compile
+[INFO] |  +- org.dom4j:dom4j:jar:2.1.1:compile
+[INFO] |  +- org.hibernate.common:hibernate-commons-annotations:jar:5.1.0.Final:compile
+[INFO] |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[INFO] |  \- org.glassfish.jaxb:jaxb-runtime:jar:2.3.1:compile
+[INFO] |     +- org.glassfish.jaxb:txw2:jar:2.3.1:compile
+[INFO] |     +- com.sun.istack:istack-commons-runtime:jar:3.0.7:compile
+[INFO] |     +- org.jvnet.staxex:stax-ex:jar:1.8:compile
+[INFO] |     \- com.sun.xml.fastinfoset:FastInfoset:jar:1.2.15:compile
+[INFO] +- org.hibernate:hibernate-annotations:jar:3.5.6-Final:compile
+[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
+[INFO] |  \- org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.0.Final:compile
+[INFO] +- mysql:mysql-connector-java:jar:8.0.18:compile
+[INFO] |  \- com.google.protobuf:protobuf-java:jar:3.6.1:compile
+[INFO] +- net.sf.ehcache:ehcache:jar:2.10.3:compile
+[INFO] +- org.hibernate:hibernate-ehcache:jar:5.4.23.Final:compile
+[INFO] \- org.slf4j:slf4j-simple:jar:1.5.8:compile
+[INFO]    \- org.slf4j:slf4j-api:jar:1.5.8:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.266 s
+[INFO] Finished at: 2020-11-29T16:37:10+05:30
+[INFO] ------------------------------------------------------------------------

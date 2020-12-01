@@ -70,11 +70,11 @@
 			<version>5.2.2.RELEASE</version>
 		</dependency-->
 		<!-- dev only to remove caches -->
-		<!--dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-		</dependency-->
+		</dependency>
 		<!--dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring5</artifactId>
@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.8</version>
+			<version>3.5</version>
 		</dependency>
 
 		<dependency>
@@ -117,13 +117,7 @@
 			<artifactId>commons-collections</artifactId>
 			<version>3.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.5</version>
-		</dependency>
-
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

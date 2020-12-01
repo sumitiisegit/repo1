@@ -14,6 +14,9 @@ commit;
 desc Language;
 select * from Language;
 
+delete from Language where lang_id not in (1,3);
+commit;
+
 drop table Language_Version;
 desc Language_Version;
 create table Language_Version (
@@ -27,6 +30,10 @@ insert into Language_Version values(1,1,"8");
 commit;
 
 select * from Language_Version;
+
+delete from Language_version where lang_version_id=1;
+update Language_version set lang_id=1 where lang_version_id=1;
+
 
 drop table Construct;
 create table Construct (

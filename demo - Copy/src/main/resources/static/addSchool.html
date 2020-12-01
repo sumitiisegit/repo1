@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new School</title>
+</head>
+<script>
+function validateForm() {
+ var schoolName = document.forms["SchoolForm"]["name"].value;
+ var zipCode = document.forms["SchoolForm"]["zipCode"].value;
+ var city = document.forms["SchoolForm"]["city"].value;
+  if (schoolName == "" || zipCode == "") {
+    alert("School Name, zip-code and city are mandatory fields.");
+    return false;
+  }
+}
+</script>
+<style>
+    .required label {
+    font-weight: bold;
+}
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+</style>
+<body>
+
+<form name="SchoolForm" method="GET" action="/demo/add" onsubmit="return validateForm()">
+    <label class="required">School name:</label>
+    <input type="text" id="name" name="name" required title="School-name"  oninvalid="this.setCustomValidity('Enter School Name Here')"
+           oninput="this.setCustomValidity('')"  /><br>
+
+    <label for="zipCode">zipCode:</label>
+    <input type="text" id="zipCode" name="zipCode" ><br>
+
+    <label for="city">city:</label>
+    <input type="text" id="city" name="city"><br>
+
+    <input type="reset" id="clear" name="Clear">
+
+    <button type="submit" id="submit" name="Submit"/>
+    Submit<br>
+</form>
+
+
+</body>
+</html>
